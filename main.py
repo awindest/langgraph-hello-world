@@ -1,7 +1,7 @@
 """
 Simple LangGraph workflow example demonstrating a basic chatbot with state management.
 """
-import os
+import os # this to get the environmental variables. Makes it easier to swap out models as they get better and better
 from typing import TypedDict, Annotated
 from dotenv import load_dotenv
 from langgraph.graph import StateGraph, START, END
@@ -23,19 +23,20 @@ def get_llm():
     # Use LMStudio to run local LLM model, it provides OpenAI compatible API
     base_url = os.getenv("LMSTUDIO_BASE_URL", "http://localhost:1234/v1")
     model_name = os.getenv("LMSTUDIO_MODEL", "qwen3-4b-2507")
-    api_key = os.getenv("LMSTUDIO_API_KEY", "lm-studio")
+    api_key = os.getenv("LMSTUDIO_API_KEY", "lm-studio") # free, yay!
     
     try:
         return ChatOpenAI(
             base_url=base_url,
             api_key=api_key,
             model=model_name,
-            temperature=0.7
+            temperature=0.7 # a setting (hyperparameter) that controls the creativity, randomness, and focus of a model's responses
+            
         )
     except Exception as e:
         print(f"Warning: Could not connect to LMStudio at {base_url}")
         print("Please ensure LMStudio is running and the server is started.")
-        print(f"Error: {e}")
+        print(f"❌ Error: {e}")
         return None
 
 # Define workflow nodes
@@ -75,7 +76,7 @@ def run_conversation():
     state = {"messages": []}
     
     while True:
-        user_input = input("You: ").strip()
+        user_input = input("Me: ").strip()
         
         if user_input.lower() in ['quit', 'exit', 'bye', 'q']:
             print("Goodbye! 👋")
@@ -99,7 +100,7 @@ def run_conversation():
             state = result
             
         except Exception as e:
-            print(f"Error: {e}\n")
+            print(f"❌ Error: {e}\n")
 
 def demo_workflow():
     """Run a simple demo of the workflow with predefined messages."""
@@ -112,7 +113,8 @@ def demo_workflow():
     demo_messages = [
         "Hello! Can you introduce yourself?",
         "What is LangGraph?",
-        "Can you explain state management in workflows?"
+        "Can you explain state management in workflows?",
+        "Where can I view the LangGraph logs for this interaction?"
     ]
     
     state = {"messages": []}
