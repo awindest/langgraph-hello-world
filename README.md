@@ -313,11 +313,11 @@ And all of this is local and running on your laptop. Great stuff!
 
 ### Now how does LangGraph fit in?
 
-Go to the LangSmith page from the [Create account page](https://docs.langchain.com/langsmith/create-account-api-key) and click on the `Tracing` menu item and select the `langgraph-hello-world` name in the Tracing panel to see what happened during your runs.
+Go to the LangSmith age from the [Create account page](https://docs.langchain.com/langsmith/create-account-api-key) and click on the `Tracing` menu item and select the `langgraph-hello-world` name in the Tracing panel to see what happened during your runs.
 
 Nice observability!
 
-There is a lot more to explore as this is just scratching the surface of LangGraph. 
+There is a lot more to explore as this is just scratching the surface of LangGraph. For more fun, there are some scenarios at the top of the `LangSmith UI` Personal Home Page that you may investigate.
 
 Hope you enjoyed this little introduction to LangGraph and the power of running LLMs locally.
 
