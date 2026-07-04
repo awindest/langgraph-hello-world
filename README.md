@@ -53,7 +53,15 @@ Then we update the shell and start a new terminal session.
 
 `uv tool update-shell`
 
+### Create an account and an API key
+
+Go to this [page](https://docs.langchain.com/langsmith/create-account-api-key)
+
+and create an account. Then go to Settings and create an API key. Copy the key and save it in your `.env` file.
+
 ### To run
+
+Copy the `pyproject.toml` file from this repository and then:
 
 `uv run main.py`
 
@@ -270,3 +278,21 @@ In short, **state management** gives workflows memory and logic. It's what trans
 
 Would you like a deeper dive into a specific part of state design (e.g., persistence, versioning, or debugging)? 😊
 
+---
+
+And all of this is local and running on your laptop. Great stuff!
+
+
+---
+
+### Now how does LangGraph fit in?
+
+Go to the  LangSmith page from the [Create account page](https://docs.langchain.com/langsmith/create-account-api-key) and click on the `Tracing` menu item and select the `langgraph-hello-world` name in the Tracing panel to see what happened during your runs.
+
+Nice observability!
+
+There is a lot more to explore as this is just scratching the surface of LangGraph. 
+
+Hope you enjoyed this little introduction to LangGraph and the power of running LLMs locally.
+
+---
