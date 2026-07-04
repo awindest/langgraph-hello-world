@@ -12,7 +12,7 @@ Thanks, guozheng!
 
 ## Github Repository
 
-The source code may be found [here](https://github.com/awindest/langgraph-hello-world)
+If you viewing this from Github Pages' web page, the source code may be found [here](https://github.com/awindest/langgraph-hello-world)
 
 ---
 
