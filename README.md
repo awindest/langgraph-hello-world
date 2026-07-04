@@ -6,7 +6,7 @@
 
 https://github.com/guozheng/hello-langgraph
 
-Thanks, guouzheng!
+Thanks, guozheng!
 
 ---
 
