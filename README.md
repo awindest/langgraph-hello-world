@@ -12,13 +12,15 @@ Thanks, guozheng!
 
 ## Github Repository
 
-If you viewing this from Github Pages' web page, the source code may be found [here](https://github.com/awindest/langgraph-hello-world)
+If you are viewing this from the Github Pages' web page, the source code may be found [here](https://github.com/awindest/langgraph-hello-world). Otherwise you are already there 😄.
 
 ---
 
-This projects shows how to build an AI workflow with LM Studio, Qwen and LangGraph to better understand how LangGraph works. All with 165 lines of code in `main.py`. Totally amazing!
+## Overview
 
-I had `qwen/qwen3.5-9b` already up and running in LM Studio, so I didn't use guozheng's specified `qwen3-4b-2507` llm, although it is a non-thinking model and may be faster. I'm still learning which model types are most suitable for which tasks and wondering if a multi-modal model is necessary for this experiment.
+This project shows how to build an AI workflow with LM Studio, Qwen and LangGraph to better understand how LangGraph works. All with 165 lines of code in `main.py`. Totally amazing!
+
+I had `qwen/qwen3.5-9b` already up and running in LM Studio, so I didn't use guozheng's specified `qwen3-4b-2507` LLM, although it is a non-thinking model and may be faster. I'm still learning which model types are most suitable for which tasks and wondering if a multi-modal model is necessary for this experiment.
 
 ## Setup Flow
 
@@ -28,7 +30,7 @@ Download from [https://lmstudio.ai](https://lmstudio.ai) and install.
 
 ### Install LLM
 
-Open LM Studio and click the search for model button and select an appropriate model. I used Qwen3.5 9B for my machine. Pick a model based on your VRAM (e.g., Qwen3.5 9B is a solid choice). Make sure the format is `GGUF`. Download the model. Depending on your network speed this may take a while.
+Open LM Studio and click the search for model button and select an appropriate model. I used `Qwen3.5 9B` for my clanker machine. Pick a model based on your VRAM (e.g., Qwen3.5 9B is a solid choice). Make sure the format is `GGUF`. Download the model. Depending on your network speed this may take a while.
 
 ### Start the Local Server
 
@@ -49,7 +51,7 @@ I used `brew install uv`.
 
 and `cd` into the newly created directory
 
-I copied guozheng's `main.py` and LICENSE file. I made a few changes but most of the `main.py` remains true to the original. 
+I copied guozheng's `main.py` and LICENSE file as well as the `pyproject.toml` file. I made a few changes but most of the `main.py` remains true to the original. 
 
 ### Install dependencies
 
@@ -62,16 +64,31 @@ Then we update the shell and start a new terminal session.
 ### Create an account and an API key
 
 Go to this [page](https://docs.langchain.com/langsmith/create-account-api-key)
+and create an account and login. Note that this page provides the link to the `LangSmith UI` Personal Home Page. Go to this page and then go to Settings and create an API key. Copy the key and save it in your `.env` file. An `env.example` file is provided but it should look like this:
 
-and create an account. Then go to Settings and create an API key. Copy the key and save it in your `.env` file.
+```
+# LMStudio Configuration
+LMSTUDIO_BASE_URL=http://localhost:1234/v1
+LMSTUDIO_MODEL=qwen/qwen3.5-9b
+LMSTUDIO_API_KEY=lm-studio
+
+# LangSmith Configuration (optional - for tracing and monitoring)
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_API_KEY=<langgraph API (its free!)>
+LANGCHAIN_PROJECT=langgraph-hello-world
+```
+
+You will return to the `LangSmith UI` Personal Home Page after you have run a few workflows to see your past interactions with the LLM. This is the whole point of this experiment.
 
 ### To run
 
-Copy the `pyproject.toml` file from this repository and then:
+Copy the `pyproject.toml` file from this repository if you haven't already done so and then:
 
 `uv run main.py`
 
-and this is what you are presented with:
+and this is what you will be presented with:
+
+---
 
 🚀 Hello from LangGraph!
 Choose an option:
@@ -81,8 +98,11 @@ Choose an option:
 
 Enter your choice (1-3):
 
+---
 
 Here is the output from the demo workflow where the **User** prompts are canned.:
+
+---
 
 Enter your choice (1-3): 2
 🔄 Running LangGraph Workflow Demo
@@ -293,7 +313,7 @@ And all of this is local and running on your laptop. Great stuff!
 
 ### Now how does LangGraph fit in?
 
-Go to the  LangSmith page from the [Create account page](https://docs.langchain.com/langsmith/create-account-api-key) and click on the `Tracing` menu item and select the `langgraph-hello-world` name in the Tracing panel to see what happened during your runs.
+Go to the LangSmith page from the [Create account page](https://docs.langchain.com/langsmith/create-account-api-key) and click on the `Tracing` menu item and select the `langgraph-hello-world` name in the Tracing panel to see what happened during your runs.
 
 Nice observability!
 
