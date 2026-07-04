@@ -10,6 +10,12 @@ Thanks, guozheng!
 
 ---
 
+## Github Repository
+
+The source code may be found [here](https://github.com/awindest/langgraph-hello-world)
+
+---
+
 This projects shows how to build an AI workflow with LM Studio, Qwen and LangGraph to better understand how LangGraph works. All with 165 lines of code in `main.py`. Totally amazing!
 
 I had `qwen/qwen3.5-9b` already up and running in LM Studio, so I didn't use guozheng's specified `qwen3-4b-2507` llm, although it is a non-thinking model and may be faster. I'm still learning which model types are most suitable for which tasks and wondering if a multi-modal model is necessary for this experiment.
