@@ -100,6 +100,8 @@ Enter your choice (1-3):
 
 ---
 
+`<begin interaction text>`
+
 Here is the output from the demo workflow where the **User** prompts are canned.:
 
 ---
@@ -306,6 +308,8 @@ Would you like a deeper dive into a specific part of state design (e.g., persist
 
 ---
 
+`<end interaction text>`
+
 And all of this is local and running on your laptop. Great stuff!
 
 
@@ -313,7 +317,7 @@ And all of this is local and running on your laptop. Great stuff!
 
 ### Now how does LangGraph fit in?
 
-Go to the LangSmith age from the [Create account page](https://docs.langchain.com/langsmith/create-account-api-key) and click on the `Tracing` menu item and select the `langgraph-hello-world` name in the Tracing panel to see what happened during your runs.
+Go to the LangSmith page from the [Create account page](https://docs.langchain.com/langsmith/create-account-api-key) and click on the `Tracing` menu item and select the `langgraph-hello-world` name in the Tracing panel to see what happened during your runs.
 
 Nice observability!
 
