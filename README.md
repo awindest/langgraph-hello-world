@@ -100,10 +100,12 @@ Enter your choice (1-3):
 
 ---
 
+Here is the output from the demo workflow where the **User** prompts are canned:
+
+---
+
+---
 `<begin interaction text>`
-
-Here is the output from the demo workflow where the **User** prompts are canned.:
-
 ---
 
 Enter your choice (1-3): 2
@@ -123,6 +125,7 @@ Hello! 👋 I'm **Qwen3.5**, the latest large language model developed by Tongyi
 Just let me know what you need! 😊 What would you like to tackle today?
 
 User: What is LangGraph?
+
 Bot:
 
 **LangGraph** is a powerful framework within the **LangChain ecosystem** designed for building **stateful, multi-actor applications** with large language models (LLMs). It focuses on creating **complex workflows** that go beyond simple linear chains, enabling structured control over how AI agents or tasks interact, iterate, and collaborate. Here's a breakdown of what makes it unique:
@@ -307,11 +310,10 @@ In short, **state management** gives workflows memory and logic. It's what trans
 Would you like a deeper dive into a specific part of state design (e.g., persistence, versioning, or debugging)? 😊
 
 ---
-
 `<end interaction text>`
+---
 
 And all of this is local and running on your laptop. Great stuff!
-
 
 ---
 
